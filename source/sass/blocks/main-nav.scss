@@ -1,0 +1,82 @@
+.main-nav {
+  display: none;
+
+  &.open {
+    display: block;
+    position: fixed;
+    background: $bg-dark-purple;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: auto;
+    opacity: 0.95;
+    transform-origin: right top;
+    transform: scale(1);
+    li {
+      display: block;
+      animation: fadeInRight 0.8s cubic-bezier(0.42, 0.83, 0.7, 1.5) forwards;
+      animation-delay: 0.8s;
+      transform: rotate(0deg);
+      transform-origin: right bottom;
+      &:nth-of-type(2) {
+        animation-delay: 1.5s;
+      }
+      &:nth-of-type(3) {
+        animation-delay: 2.6s;
+      }
+      &:nth-of-type(4) {
+        animation-delay: 3.7s;
+      }
+      &:nth-of-type(5) {
+        animation-delay: 4.8s;
+      }
+    }
+  }
+}
+
+.main-nav__list {
+  @include list;
+
+  display: flex;
+  flex-direction: column;
+  margin-top: $header-height;
+}
+
+.main-nav__link {
+  @include font-style(18px, 41px, 500);
+  @include link;
+
+  margin-bottom: 20px;
+
+  &:hover,
+  &:focus {
+    background-color: $bg-purple;
+  }
+  &:active {
+    opacity: 0.5;
+  }
+}
+
+@include respond-to(large) {
+  .main-nav {
+    display: block;
+  }
+
+  .main-nav__list {
+    margin: 0;
+    flex-direction: row;
+  }
+
+  .main-nav__link {
+      margin-left: 30px;
+
+      &:hover,
+      &:focus {
+        text-decoration: underline;
+        background-color: transparent;
+      }
+      &:active {
+        opacity: 0.5;
+      }
+  }
+}

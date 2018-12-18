@@ -1,0 +1,23 @@
+.main-header {
+  width: 100%;
+  position: fixed;
+  z-index: 10;
+}
+
+.main-header__wrapper {
+  display: flex;
+  min-height: $header-height;
+  justify-content: space-between;
+  position: relative;
+  align-items: center;
+}
+
+.main-header__logo {
+  @include link;
+}
+
+@include respond-to(medium) {
+  .main-header__wrapper {
+    align-items: center;
+  }
+}

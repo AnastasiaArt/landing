@@ -1,0 +1,84 @@
+/*
+Icon classes can be used entirely standalone. They are named after their original file names.
+
+Example usage in HTML:
+
+`display: block` sprite:
+<div class="icon-home"></div>
+
+To change `display` (e.g. `display: inline-block;`), we suggest using a common CSS class:
+
+// CSS
+.icon {
+  display: inline-block;
+}
+
+// HTML
+<i class="icon icon-home"></i>
+*/
+.icon-facebook-icon {
+  background-image: url(sprite.png);
+  background-position: -256px -236px;
+  width: 15px;
+  height: 26px;
+}
+.icon-flowtree-icon {
+  background-image: url(sprite.png);
+  background-position: 0px -197px;
+  width: 220px;
+  height: 220px;
+}
+.icon-ipad-icon {
+  background-image: url(sprite.png);
+  background-position: -220px -236px;
+  width: 36px;
+  height: 36px;
+}
+.icon-mail-icon {
+  background-image: url(sprite.png);
+  background-position: -242px -327px;
+  width: 26px;
+  height: 17px;
+}
+.icon-mobile-icon {
+  background-image: url(sprite.png);
+  background-position: -220px -366px;
+  width: 17px;
+  height: 29px;
+}
+.icon-person-icon {
+  background-image: url(sprite.png);
+  background-position: -220px -298px;
+  width: 22px;
+  height: 46px;
+}
+.icon-pinterest-icon {
+  background-image: url(sprite.png);
+  background-position: -242px -298px;
+  width: 23px;
+  height: 29px;
+}
+.icon-star-icon {
+  background-image: url(sprite.png);
+  background-position: -220px -197px;
+  width: 39px;
+  height: 39px;
+}
+.icon-twitter-icon {
+  background-image: url(sprite.png);
+  background-position: -220px -344px;
+  width: 27px;
+  height: 22px;
+}
+.icon-users-icon {
+  background-image: url(sprite.png);
+  background-position: 0px 0px;
+  width: 272px;
+  height: 197px;
+}
+.icon-video-icon {
+  background-image: url(sprite.png);
+  background-position: -220px -272px;
+  width: 39px;
+  height: 26px;
+}

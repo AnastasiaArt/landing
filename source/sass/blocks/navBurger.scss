@@ -1,0 +1,62 @@
+.navBurger {
+    position: absolute;
+    right: 0;
+    top: 25px;
+    cursor: pointer;
+    background: $white;
+    box-sizing: border-box;
+    background-clip: content-box;
+    width: 30px;
+    height: 24px;
+    border-top: 11px solid transparent;
+    border-bottom: 11px solid transparent;
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+    -webkit-transition: all 0.25s ease-in-out;
+    transition: all 0.25s ease-in-out;
+    &:before,
+    &:after {
+        content: "";
+        position: absolute;
+        background: $white;
+        height: 2px;
+        width: 100%;
+        right: 0;
+        will-change: rotate;
+        -webkit-transform: rotate(0deg);
+        transform: rotate(0deg);
+        -webkit-transition: all 0.5s ease;
+        transition: all 0.5s ease;
+    }
+    &:before {
+        top: -10px;
+    }
+    &:after {
+        bottom: -10px;
+        width: 90%;
+    }
+    &.active {
+        background: transparent;
+        background-clip: content-box;
+    }
+    &.active:before {
+        -webkit-transform: rotate(135deg);
+        transform: rotate(135deg);
+        top: 0;
+        background: #eee;
+        width: 110%;
+    }
+    &.active:after {
+        bottom: 0;
+        -webkit-transform: rotate(-135deg);
+        transform: rotate(-135deg);
+        background: #eee;
+        width: 110%;
+    }
+}
+
+@include respond-to(large) {
+  .navBurger {
+    display: none;
+  }
+}

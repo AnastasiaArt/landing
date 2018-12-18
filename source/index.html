@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="format-detection" content="telephone=no">
+  <title>HTML Academy: Пинк</title>
+  <link href="css/style-min.css" rel="stylesheet">
+  <script src="js/main-min.js"></script>
+</head>
+<body>
+  <header class="main-header">
+    <div class="main-header__wrapper container">
+      <a class="main-header__logo">
+        <img src="img/logo.png">
+      </a>
+      <nav class="main-nav">
+        <ul class="main-nav__list">
+          <li class="main-nav__item"><a class= "main-nav__link" href="#home">Home</a></li>
+          <li class="main-nav__item"><a class= "main-nav__link" href="#services">Services</a></li>
+          <li class="main-nav__item"><a class= "main-nav__link" href="#clients">Clients</a></li>
+          <li class="main-nav__item"><a class= "main-nav__link" href="#">Team</a></li>
+          <li class="main-nav__item"><a class= "main-nav__link" href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+      <div class="navBurger" role="navigation" id="navToggle"></div>
+    </div>
+  </header>
+  <main class="main-content">
+    <section class="home">
+      <h1 class="visually-hidden">Escape - Web Develpment</h1>
+      <div class="container">
+        <p class="home__text home__text--small"><a name="home"></a>Can you build the website of my dreams?</p>
+        <p class="home__text home__text--big">Yup, we can do that.</p>
+        <a class="home__button">Learn More</a>
+      </div>
+    </section>
+    <section class="services container">
+      <ul class="services__list">
+        <li class="services__item">
+          <h2 class="services__title"><a name="services"></a><span>Web</span> Development</h2>
+          <p class="services__text">Proin iaculis purus consequat sem cure digni ssim. Donec porttitora entum suscipit aenean rhoncus posuere odio in tincidunt. Proin iaculis purus consequat sem cure digni ssim. Donec porttitora entum suscipit aenean rhoncus posuere odio in tincidunt.
+            Iaculis purus consequat sem cure digni ssim. Donec porttitora entum suscipit aenean rhoncus posuere odio in tincidunt. Proin iaculis purus consequat sem cure digni ssim.
+          </p>
+        </li>
+        <li class="services__item">
+          <h2 class="services__title"><span>Identity</span> Branding</h2>
+          <p class="services__text">Proin iaculis purus consequat sem cure digni ssim. Donec porttitora entum suscipit aenean rhoncus posuere odio in tincidunt. Proin iaculis purus consequat sem cure digni ssim. Donec porttitora entum suscipit.
+            Iaculis purus consequat sem cure digni ssim. Donec porttitora entum suscipit aenean rhoncus posuere odio in tincidunt. Proin iaculis purus consequat.
+          </p>
+        </li>
+      </ul>
+    </section>
+  </main>
+<script> $("#navToggle").click(function() {
+    $(this).toggleClass("active");
+    $(".main-nav").toggleClass("open");
+    // this line ▼ prevents content scroll-behind
+    // $("body").toggleClass("locked");
+});</script>
+</body>
+</html>

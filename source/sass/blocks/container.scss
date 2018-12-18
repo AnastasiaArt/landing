@@ -1,0 +1,13 @@
+.container {
+  margin: $center;
+  width: map-get($container, xs);
+}
+   @include respond-to(medium) {
+     .container {
+     width: map-get($container, ml);
+   }}
+   @include respond-to(large) {
+     .container {
+     width: map-get($container, xl);
+   }
+}

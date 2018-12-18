@@ -1,0 +1,11 @@
+.services__list {
+  @include list;
+}
+
+.services__title {
+  @include font-style(60px, 78px, 700);
+
+  & span {
+    font-weight: 300;
+  }
+}
