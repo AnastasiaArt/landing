@@ -35,7 +35,17 @@ gulp.task("css", function() {
   .pipe(gulp.dest("build/css"))
   .pipe(server.stream());
 });
+gulp.task('sprite', function() {
+    var spriteData =
+        gulp.src('source/img/*-icon.png') // путь, откуда берем картинки для спрайта
+            .pipe(spritesmith({
+                imgName: 'sprite.png',
+                cssName: 'sprite.css',
+            }));
 
+    spriteData.img.pipe(gulp.dest('source/img/')); // путь, куда сохраняем картинку
+    spriteData.css.pipe(gulp.dest('source/sass')); // путь, куда сохраняем стили
+});
 gulp.task('scripts', function() {
 return gulp.src([
 'node_modules/jquery/dist/jquery.min.js',
@@ -54,43 +64,15 @@ gulp.task("images", function() {
   .pipe(gulp.dest("build/img"));
 });
 
-// gulp.task('sprite', function () {
-// var spriteData;
-//   return spriteData =
-//             gulp.src('source/img/*-icon.png') // source path of the sprite images
-//             .pipe(spritesmith({
-//                 imgName: 'sprite.png',
-//                 cssName: 'sprite.css'
-//             }))
-//
-//     spriteData.img.pipe(gulp.dest("source/img")); // output path for the sprite
-//     spriteData.css.pipe(gulp.dest("source/sass")); // output path for the CSS
-// });
-//
 gulp.task("images", function() {
-  return gulp.src("source/img/**/*.{png,jpg,svg}")
+  return gulp.src("source/img/**/*.{png,jpg}")
   .pipe(imagemin([
     imagemin.optipng({optimizationLevel:3}),
     imagemin.jpegtran({progressive:true}),
     imagemin.svgo()
   ]))
-  .pipe(gulp.dest("source/img"));
+  .pipe(gulp.dest("build/img"));
 });
-//
-// gulp.task("webp", function() {
-//   return gulp.src("source/img/**/*.{png,jpg}")
-//   .pipe(webp({quality: 90}))
-//   .pipe(gulp.dest("source/img"));
-// });
-//
-// gulp.task("sprite", function() {
-//   return gulp.src("source/img/icon-*.svg")
-//   .pipe(svgstore({
-//     inlineSvg:true
-//   }))
-//   .pipe(rename("sprite.svg"))
-//   .pipe(gulp.dest("build/img"));
-// });
 
 gulp.task("html", function() {
   return gulp.src("source/*.html")

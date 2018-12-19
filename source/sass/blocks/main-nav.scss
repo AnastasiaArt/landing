@@ -14,26 +14,36 @@
     transform: scale(1);
     li {
       display: block;
-      animation: fadeInRight 0.8s cubic-bezier(0.42, 0.83, 0.7, 1.5) forwards;
-      animation-delay: 0.8s;
-      transform: rotate(0deg);
+      animation: fadeInRight 0.4s cubic-bezier(0.42, 0.83, 0.7, 1.5) forwards;
+      animation-delay: 0.4s;
+      transform: rotate(-7deg);
       transform-origin: right bottom;
       &:nth-of-type(2) {
-        animation-delay: 1.5s;
+        animation-delay: 0.5s;
       }
       &:nth-of-type(3) {
-        animation-delay: 2.6s;
+        animation-delay: 0.6s;
       }
       &:nth-of-type(4) {
-        animation-delay: 3.7s;
+        animation-delay: 0.7s;
       }
       &:nth-of-type(5) {
-        animation-delay: 4.8s;
+        animation-delay: 0.8s;
       }
     }
   }
 }
-
+@keyframes fadeInRight {
+    0% {
+        opacity: 0;
+        left: 50px;
+    }
+    100% {
+        opacity: 1;
+        left: 0;
+        transform: rotate(0deg);
+    }
+}
 .main-nav__list {
   @include list;
 
@@ -47,6 +57,7 @@
   @include link;
 
   margin-bottom: 20px;
+  letter-spacing: 0;
 
   &:hover,
   &:focus {

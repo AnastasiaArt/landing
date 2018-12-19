@@ -1,0 +1,110 @@
+/*
+Icon classes can be used entirely standalone. They are named after their original file names.
+
+Example usage in HTML:
+
+`display: block` sprite:
+<div class="icon-home"></div>
+
+To change `display` (e.g. `display: inline-block;`), we suggest using a common CSS class:
+
+// CSS
+.icon {
+  display: inline-block;
+}
+
+// HTML
+<i class="icon icon-home"></i>
+*/
+.icon-browser-icon {
+  background-image: url(../img/sprite.png);
+  background-position: -220px -236px;
+  width: 39px;
+  height: 34px;
+}
+.icon-camera-icon {
+  background-image: url(../img/sprite.png);
+  background-position: -220px -378px;
+  width: 33px;
+  height: 29px;
+}
+.icon-facebook-icon {
+  background-image: url(../img/sprite.png);
+  background-position: -295px -68px;
+  width: 15px;
+  height: 26px;
+}
+.icon-flowtree-icon {
+  background-image: url(../img/sprite.png);
+  background-position: 0px -197px;
+  width: 220px;
+  height: 220px;
+
+  @include respond-to(large) {
+    display: block;
+  }
+}
+.icon-google-icon {
+  background-image: url(../img/sprite.png);
+  background-position: -242px -332px;
+  width: 26px;
+  height: 26px;
+}
+.icon-ipad-icon {
+  background-image: url(../img/sprite.png);
+  background-position: -220px -270px;
+  width: 36px;
+  height: 36px;
+}
+.icon-mail-icon {
+  background-image: url(../img/sprite.png);
+  background-position: -295px -51px;
+  width: 26px;
+  height: 17px;
+}
+.icon-mobile-icon {
+  background-image: url(../img/sprite.png);
+  background-position: -295px -22px;
+  width: 17px;
+  height: 29px;
+}
+.icon-person-icon {
+  background-image: url(../img/sprite.png);
+  background-position: -220px -332px;
+  width: 22px;
+  height: 46px;
+}
+.icon-pinterest-icon {
+  background-image: url(../img/sprite.png);
+  background-position: -272px 0px;
+  width: 23px;
+  height: 29px;
+}
+.icon-star-icon {
+  background-image: url(../img/sprite.png);
+  background-position: -220px -197px;
+  width: 39px;
+  height: 39px;
+}
+.icon-twitter-icon {
+  background-image: url(../img/sprite.png);
+  background-position: -295px 0px;
+  width: 27px;
+  height: 22px;
+}
+.icon-users-icon {
+  background-image: url(../img/sprite.png);
+  background-position: 0px 0px;
+  width: 272px;
+  height: 197px;
+
+  @include respond-to(large) {
+    display: block;
+  }
+}
+.icon-video-icon {
+  background-image: url(../img/sprite.png);
+  background-position: -220px -306px;
+  width: 39px;
+  height: 26px;
+}

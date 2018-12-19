@@ -11,6 +11,7 @@ body {
   position: relative;
   padding: 0;
   overflow-x: hidden;
+  letter-spacing: -0.025em;
 
   @include font-style(18px, 18px, 400);
 }

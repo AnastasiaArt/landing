@@ -10,17 +10,20 @@
   background-image: url("../img/tint.png"), url("../img/bg-home.jpg");
   background-size: cover;
   background-position: top;
+  margin-bottom: 95px;
 }
 
 .home__text {
   &--small {
     @include font-style(32px, 38px, 300);
+
     margin-top: 11.4%;
     margin-bottom: 30px;
   }
 
   &--big {
     @include font-style(66px, 79px, 700);
+
     margin-bottom: 70px;
   }
 }
@@ -28,7 +31,9 @@
 .home__button {
   @include font-style(23px, 28px, 700);
   @include link;
+
   display: inline-block;
   border: 3px solid $white;
   padding: 20px 60px;
+  letter-spacing: 0;
 }

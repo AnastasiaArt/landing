@@ -1,0 +1,21 @@
+.contacts {
+  background-color: $bg-purple;
+  color: $white;
+}
+.contacts__title {
+  @include indent;
+  @include font-style(60px, 72px, 700);
+
+  text-align: left;
+
+  & span {
+    font-weight: 300;
+  }
+}
+
+.contacts__text {
+  @include indent;
+  @include font-style(18px, 22px, 400);
+
+  text-align: left;
+}
