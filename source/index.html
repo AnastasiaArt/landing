@@ -15,7 +15,7 @@
   <header class="main-header">
     <div class="main-header__wrapper container">
       <a class="main-header__logo">
-        <img src="img/logo-img.png">
+        <img src="img/logo-img.png" alt="Logo Escape">
       </a>
       <nav class="main-nav">
         <ul class="main-nav__list">
@@ -130,22 +130,23 @@
           <li class="contacts__item"><a class="contacts__link" href="https://www.pinterest.ru/escape/"><i class="icon icon-pinterest-icon contacts__icon"></i>pinterest.com/escape</a></li>
         </ul>
       </div>
-      <form class="contacts__form form" action="" method="post">
+      <form class="contacts__form form" method="post">
         <fieldset>
           <h3 class="visually-hidden">Form CallBack</h3>
           <p class="form__item">
-            <label class="visually-hidden" for="name">Name</label>
-            <input class="form__input" type="text" name="name" id="name" value="" placeholder="Your Name *" required>
+            <label class="visually-hidden" for="id-name">Name</label>
+            <input class="form__input" type="text" name="name" id="id-name" value="" placeholder="Your Name *" required>
           </p>
           <p class="form__item">
-            <label class="visually-hidden" for="e-mail">E-mail</label>
-            <input class="form__input" type="e-mail" name="e-mail" id="name" value="" placeholder="Your E-mail *" required>
+            <label class="visually-hidden" for="id-e-mail">E-mail</label>
+            <input class="form__input" type="email" name="e-mail" id="id-e-mail" value="" placeholder="Your E-mail *" required>
           </p>
           <p class="form__item">
-            <label class="visually-hidden" for="message">Message</label>
-            <textarea class="form__input form__input--textarea" name="message" id="message" placeholder="Your Message *" required></textarea>
+            <label class="visually-hidden" for="id-message">Message</label>
+            <textarea class="form__input form__input--textarea" name="message" id="id-message" placeholder="Your Message *"></textarea>
           </p>
         </fieldset>
+      </form>
       </section>
       <p class="copyright">&copy;2014 Escape by FreebiesXpress &#8226; Made In Toronto</p>
     </footer>
