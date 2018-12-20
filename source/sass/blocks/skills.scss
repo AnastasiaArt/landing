@@ -1,11 +1,11 @@
 .skills {
-  margin-bottom: 100px;
+  margin-bottom: 50px;
 }
 
 .skills__list {
   @include list;
 
-  padding: 0 2.88%;
+  padding: 0 3%;
   box-sizing: border-box;
 }
 
@@ -26,10 +26,10 @@
 .skills__item {
   width: 100%;
   box-sizing: border-box;
-  padding-left: 90px;
+  padding-left: 100px;
   position: relative;
   text-align: left;
-  margin-bottom: 45px;
+  margin-bottom: 50px;
 
   &:before {
     @include pseudo;
@@ -37,7 +37,7 @@
     width: 72px;
     height: 72px;
     top: 0;
-    left: 0;
+    left: 5px;
     border-radius: 50%;
     background-color: $gray-dark;
   }
@@ -46,7 +46,7 @@
 .skills__icon {
   position: absolute;
   top: 36px;
-  left: 36px;
+  left: 41px;
   transform: translate(-50%, -50%);
 }
 
@@ -60,6 +60,6 @@
   }
 
   .skills__item {
-    width: 44.2%;
+    width: 43.6%;
   }
 }

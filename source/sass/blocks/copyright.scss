@@ -1,0 +1,7 @@
+.copyright {
+  @include font-style(16px, 22px, 500);
+  @include indent;
+
+  padding-top: 25px;
+  padding-bottom: 30px;
+}

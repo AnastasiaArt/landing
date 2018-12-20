@@ -1,12 +1,15 @@
 .contacts {
-  background-color: $bg-purple;
-  color: $white;
+  padding-top: 90px;
+  padding-bottom: 97px;
+  border-bottom: 1px solid #87A0D2;
 }
+
 .contacts__title {
   @include indent;
   @include font-style(60px, 72px, 700);
 
   text-align: left;
+  margin-bottom: 15px;
 
   & span {
     font-weight: 300;
@@ -18,4 +21,77 @@
   @include font-style(18px, 22px, 400);
 
   text-align: left;
+  margin-bottom: 50px;
+}
+
+.contacts__list {
+  @include list;
+  @include font-style(18px, 22px, 400);
+
+  letter-spacing: 0;
+  text-align: left;
+  width: 100%;
+}
+
+.contacts__item {
+  box-sizing: border-box;
+  margin-bottom: 35px;
+  padding-left: 40px;
+  position: relative;
+  min-height: 30px;
+}
+
+.contacts__icon {
+  position: absolute;
+  top: 14px;
+  left: 15px;
+  transform: translate(-50%, -50%);
+}
+
+.contacts__link {
+  color: $white;
+  text-decoration: none;
+}
+
+.contacts__link:hover ,
+.contacts__link:focus {
+  border-bottom: 1px solid $white;
+}
+
+.contacts__link:active {
+  color: $gray;
+  border-bottom: 1px solid $gray;
+}
+
+.contacts__form {
+  width: 100%;
+}
+
+@include respond-to(medium) {
+  .contacts__list {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+
+  .contacts__item {
+    width: 45.3%;
+  }
+}
+
+@include respond-to(large) {
+  .contacts {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-wrap: wrap;
+  }
+
+  .contacts__wrapper {
+    width: 45.4%;
+  }
+
+  .contacts__form {
+    width: 48.6%;
+  }
 }

@@ -1,3 +1,35 @@
 .form {
+ box-sizing: border-box;
+ padding-top: 7px;
 
+ & fieldset {
+   @include indent;
+
+   border: none;
+ }
+}
+.form__input {
+  width: 100%;
+  padding: 17px 20px;
+  box-sizing: border-box;
+  border-radius: 3px;
+  border: none;
+  margin-bottom: 27px;
+
+  &--textarea {
+    margin-bottom: 0;
+    min-height: 212px;
+  }
+}
+
+.form__input[placeholder] {
+  color: #bbbbbb;
+}
+
+.form__item {
+  @include indent;
+}
+
+.form__input[type="e-mail"] {
+  margin-bottom: 19px;
 }

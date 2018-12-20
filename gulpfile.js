@@ -15,7 +15,7 @@ var posthtml = require("gulp-posthtml");
 var include = require("posthtml-include");
 var del = require("del");
 var concat = require("gulp-concat");
-var uglify = require('gulp-uglify');
+var uglify = require("gulp-uglify");
 var spritesmith = require("gulp.spritesmith");
 
 gulp.task("delete", function() {
@@ -29,47 +29,39 @@ gulp.task("css", function() {
   .pipe(postcss([
     autoprefixer()
   ]))
-  .pipe(gulp.dest("build/css"))
+  .pipe(gulp.dest("source/css"))
   .pipe(csso())
   .pipe(rename("style-min.css"))
   .pipe(gulp.dest("build/css"))
   .pipe(server.stream());
 });
-gulp.task('sprite', function() {
-    var spriteData =
-        gulp.src('source/img/*-icon.png') // путь, откуда берем картинки для спрайта
-            .pipe(spritesmith({
-                imgName: 'sprite.png',
-                cssName: 'sprite.css',
-            }));
-
-    spriteData.img.pipe(gulp.dest('source/img/')); // путь, куда сохраняем картинку
-    spriteData.css.pipe(gulp.dest('source/sass')); // путь, куда сохраняем стили
-});
-gulp.task('scripts', function() {
+// gulp.task('sprite', function() {
+//     var spriteData =
+//         gulp.src('source/img/*-icon.png')
+//             .pipe(spritesmith({
+//                 imgName: 'sprite.png',
+//                 cssName: 'sprite.css',
+//             }));
+//
+//     spriteData.img.pipe(gulp.dest('source/img/'));
+//     spriteData.css.pipe(gulp.dest('source/sass'));
+// });
+gulp.task("scripts", function() {
 return gulp.src([
-'node_modules/jquery/dist/jquery.min.js',
-'source/js/main.js'
+"node_modules/jquery/dist/jquery.min.js",
+"source/js/main.js"
 ])
-.pipe(concat('main-min.js'))
-.pipe(gulp.dest('source/js/'));
+.pipe(concat("main-min.js"))
+.pipe(gulp.dest("source/js"));
 });
 
 gulp.task("images", function() {
-  return gulp.src("files/img/*.{png,jpg}")
+  return gulp.src(["source/img/*-img.*",
+  "source/img/sprite.png"
+])
   .pipe(imagemin([
     imagemin.optipng({optimizationLevel:3}),
     imagemin.jpegtran({progressive:true})
-  ]))
-  .pipe(gulp.dest("build/img"));
-});
-
-gulp.task("images", function() {
-  return gulp.src("source/img/**/*.{png,jpg}")
-  .pipe(imagemin([
-    imagemin.optipng({optimizationLevel:3}),
-    imagemin.jpegtran({progressive:true}),
-    imagemin.svgo()
   ]))
   .pipe(gulp.dest("build/img"));
 });
@@ -82,7 +74,7 @@ gulp.task("html", function() {
 gulp.task("copy", function () {
   return gulp.src([
     "source/fonts/**",
-    "source/js/**"
+    "source/js/main-min.js"
   ], {
     base: "source"
   })
