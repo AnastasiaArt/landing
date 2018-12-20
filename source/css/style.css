@@ -389,7 +389,7 @@ input[type="range"].visually-hidden {
   background-position: 0px -197px;
   width: 220px;
   height: 220px; }
-  @media (min-width: 960px) {
+  @media (min-width: 980px) {
     .icon-flowtree-icon {
       display: block; } }
 
@@ -446,7 +446,7 @@ input[type="range"].visually-hidden {
   background-position: 0px 0px;
   width: 272px;
   height: 197px; }
-  @media (min-width: 960px) {
+  @media (min-width: 980px) {
     .icon-users-icon {
       display: block; } }
 
@@ -464,7 +464,7 @@ input[type="range"].visually-hidden {
   .container {
     width: 80%; } }
 
-@media (min-width: 960px) {
+@media (min-width: 980px) {
   .container {
     width: 67.14%; } }
 
@@ -585,7 +585,7 @@ input[type="range"].visually-hidden {
   .main-nav__link:active {
     opacity: 0.5; }
 
-@media (min-width: 960px) {
+@media (min-width: 980px) {
   .main-nav {
     display: block; }
   .main-nav__list {
@@ -653,7 +653,7 @@ input[type="range"].visually-hidden {
     background: #eee;
     width: 110%; }
 
-@media (min-width: 960px) {
+@media (min-width: 980px) {
   .navBurger {
     display: none; } }
 
@@ -763,7 +763,7 @@ input[type="range"].visually-hidden {
     text-align: center;
     text-align: left; } }
 
-@media (min-width: 960px) {
+@media (min-width: 980px) {
   .services__item {
     -webkit-box-sizing: border-box;
             box-sizing: border-box;
@@ -776,7 +776,8 @@ input[type="range"].visually-hidden {
     -webkit-box-align: top;
         -ms-flex-align: top;
             align-items: top;
-    position: relative; }
+    position: relative;
+    z-index: 10; }
     .services__item--bg {
       display: block;
       width: 100%; }
@@ -797,11 +798,13 @@ input[type="range"].visually-hidden {
             align-items: center;
     -webkit-box-sizing: border-box;
             box-sizing: border-box;
-    position: relative; }
+    position: relative;
+    z-index: 10; }
   .services__icon {
     position: absolute;
     right: 5%;
     top: 50%;
+    z-index: -2;
     -webkit-transform: translateY(-50%);
             transform: translateY(-50%); }
     .services__icon--users {
@@ -962,7 +965,7 @@ input[type="range"].visually-hidden {
   .contacts__item {
     width: 45.3%; } }
 
-@media (min-width: 960px) {
+@media (min-width: 980px) {
   .contacts {
     display: -webkit-box;
     display: -ms-flexbox;
